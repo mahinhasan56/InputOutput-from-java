@@ -1,0 +1,13 @@
+import java.io.*;
+
+public class FileReaderDemo {
+	public static void main(String args[]) throws Exception
+	{
+	  File f=new File("FileReaderDemo.java");
+	  FileReader fr = new FileReader(f);
+	  char data[]=new char[(int)f.length()];
+	  fr.read(data);   
+	  System.out.println(new String(data));
+	  fr.close();
+	}
+}
